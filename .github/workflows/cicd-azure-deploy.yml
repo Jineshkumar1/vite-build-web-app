@@ -2,6 +2,9 @@ name: CICD for Vite Build and Deploy for Node Web App to Azure
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 defaults:
   run:
