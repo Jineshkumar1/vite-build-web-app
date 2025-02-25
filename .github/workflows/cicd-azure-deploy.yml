@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+defaults:
+ run:
+    working-directory: ./hello-world
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -37,8 +41,8 @@ jobs:
         with:
           name: dist
 
-      - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'vite-node-web-app'
-          package: dist
+    #   - name: Deploy to Azure Web App
+    #     uses: azure/webapps-deploy@v2
+    #     with:
+    #       app-name: 'vite-node-web-app'
+    #       package: dist
